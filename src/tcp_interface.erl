@@ -12,7 +12,7 @@
 -export([start/0]).
 
 start() ->
-	{ok, Data} = application:get_env(tcp, ports),
+	{ok, Data} = application:get_env(erl_tcp, ports),
 	Ports = get_ports(Data, []),
 	start(Ports).
 
